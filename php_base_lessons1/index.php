@@ -125,24 +125,44 @@ echo $$foo;
 <?php
 
 $a=10;
-$b=0;
-$operator="/";
-    if ($operator == "/" and $b == 0)
-    echo "На 0 делить нельзя";
-
-    if ($operator == "*")        {    $result=$a*$b; }
-    elseif ($operator == "-")    {    $result=$a-$b; }
-    elseif ($operator == "+")    {    $result=$a+$b; }
-//    elseif ($operator == "/")    {    $result=$a/$b; }
-    echo "$result";
+$b=5;
+$operator="*";
+    if ($operator == "/" and $b == 0) {
+    echo "<b>На 0 делить нельзя</b>";}
+    elseif ($operator == "*")    {    $result=$a*$b;
+        echo "$result";}
+    elseif ($operator == "-")    {    $result=$a-$b;
+        echo "$result";}
+    elseif ($operator == "+")    {    $result=$a+$b;
+        echo "$result";}
+    elseif ($operator == "/")    {    $result=$a/$b;
+        echo "$result";
+    }
 ?>
 
-
 <p>16. Создайте две переменные $a и $b, значения которых будут числами. Выведите максимальное число из этих двух.</p>
+<?php
+$a = 144;
+$b = 173;
+if ($a>$b)
+    echo "<b> $a biggest then $b </b>";
+else
+    echo "<b> $b biggest then $a </b>"
+?>
 
 <p>17. Создайте две переменные $a = '78' (строковый тип) и $b = 78 (целочисленный тип). Проверьте эти две переменные на равность, с помощью if выведите "равны" или "не равны".</p>
+<?php
+$a = "78";
+$b = 78;
+if ($a==$b)
+    echo "Var $a==$b";
+else
+    echo "<b> Var $a ne ravna $b </b>";
+?>
 
 <p>18. Создайте две переменные $a = '78' (строковый тип) и $b = 78 (целочисленный тип). Проверьте эти две переменные на эквивалентность, с помощью if выведите "эквивалентны" или "не эквивалентны".</p>
+
+
 
 <p>19. Выведите результат сравнения $a и $b из п.17 с помощью var_dump.</p>
 
