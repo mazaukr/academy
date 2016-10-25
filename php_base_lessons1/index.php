@@ -81,8 +81,8 @@ switch ($day) {
     case 1: echo '<b>Monday</b>'; break;
     case 2: echo '<b>Tuesday</b>'; break;
     case 3: echo '<b>Wednesday</b>'; break;
-    case 4:  echo '<b>Thursday</b>'; break;
-    case 5:  echo '<b>Friday</b>'; break;
+    case 4: echo '<b>Thursday</b>'; break;
+    case 5: echo '<b>Friday</b>'; break;
 }
 ?>
 
@@ -170,7 +170,7 @@ else
     echo "<b> Var $a <> $b </b>";
 ?>
 
-<p>19. Выведите результат сравнения $a и $b из п.17 с помощью var_dump.</p>
+<p>19. Выведите результат сравнения $a и $b из п.17 с помощью var_dump ???????????????????.</p>
 <?php
 $a = '78';
 $b = 78;
@@ -182,11 +182,19 @@ else
     echo "<b> Var $a <> $b </b>";
 ?>
 
-
-
 <p>20. Приведите число 20 к типу boolean. Объясните результат.</p>
+<?php
+$a = 20;
+$b = (bool)$a;
+echo "<b> $b </b>";
+?>
 
 <p>21. Приведите число 0 к типу boolean. Объясните результат.</p>
+<?php
+$a = 0;
+$b = (bool)$a;
+echo "<b> $b </b>";
+?>
 
 <p>22. Приведите число -20 к типу boolean. Объясните результат.</p>
 
