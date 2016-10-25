@@ -219,6 +219,6 @@ echo "<b> $b </b>";
 <p>
     <b>&copy; 2014-2016 <a href="http://php-academy.kiev.ua/" target="_blank">PHP Academy</a></b>
 </p>
-//dfdfdfdf
+
 </body>
 </html>
