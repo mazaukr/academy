@@ -1,3 +1,5 @@
+<?php include("controller.php") ?>
+<?php include("model.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,22 +44,13 @@
 
 
 
-
-
-
-
-
-
-
-
     <div>
-        <form method="post">
-            Name: <input type="text" class="form-control" placeholder="Your Name" name="name">
-            Count: <input type="text"  class="form-control" placeholder="0" name="count">
-            Price: <input type="text"  class="form-control" placeholder="0" name="price">
 
-
-
+        <form method="get">
+            Name: <input type="text" class="form-control" placeholder="Your Name" name="name" value="<?php $_GET['name']?>">
+            Count: <input type="text"  class="form-control" placeholder="0" name="count" value="<?php $_GET['count']?>">
+            Price: <input type="text"  class="form-control" placeholder="0" name="price" value="<?php $_GET['price']?>">
+            <input type="submit" value="Send">
         </form>
 
 
