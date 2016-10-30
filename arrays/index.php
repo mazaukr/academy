@@ -41,6 +41,13 @@
         <h1><a href="/">Form</a></h1>
     </div>
 
+    <?php
+
+
+    if ( isset($_SESSION['guest_list']))
+        $list = $_SESSION['guest_list'];
+    ?>
+
     <?php foreach ($list as $guest_arr) { ?>
         <b><?=$guest_arr['name']?></b>
         count: <?=$guest_arr['count']?>
