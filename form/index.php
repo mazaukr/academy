@@ -1,5 +1,5 @@
-<?php include('controller.php');?>
-<?php include('model.php');?>
+<?php include("controller.php") ?>
+<?php include("model.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,29 +41,20 @@
         <h1><a href="/">Form</a></h1>
     </div>
 
-    <?php
 
 
-    if ( isset($_SESSION['guest_list']))
-        $list = $_SESSION['guest_list'];
-    ?>
 
-    <?php foreach ($list as $guest_arr) { ?>
-        <b><?=$guest_arr['name']?></b>
-        count: <?=$guest_arr['count']?>
-        prise: <?=$guest_arr['price']?>
-        SUM: <b><?=$guest_arr['sum']?></b>
-        <br />
-        <br />
-    <?php } ?>
-    <?=count($list)?>
     <div>
-        <form method="post">
-            Name: <input type="text" class="form-control" praceholder="Name..." name="name" value="<?php if(isset($_GET['name'])) echo clear_data($_GET['name'])?>"/>
-            Count: <input type="text" class="form-control" praceholder="0" name="count" value="<?=$_GET['count']?>"/>
-            Price [$/h]: <input type="text" class="form-control" praceholder="0" name="price"  value="<?=$_GET['price']?>"/>
+
+        <form method="get">
+            Name: <input type="text" class="form-control" placeholder="Your Name" name="name" value="<?php $_GET['name']?>">
+            Count: <input type="text"  class="form-control" placeholder="0" name="count" value="<?php $_GET['count']?>">
+            Price: <input type="text"  class="form-control" placeholder="0" name="price" value="<?php $_GET['price']?>">
             <input type="submit" value="Send">
         </form>
+
+
+
     </div>
 </div>
 
