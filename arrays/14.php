@@ -5,13 +5,33 @@
 <?php
 
 $arr = Array(4, 2, 5, 19, 13, 0, 10);
-$e = Array(2,3,4);
-$i=0;
-foreach ($arr as $value=>$key) {
-    foreach ($e as $item) {
-        if ($key==$item)
-    }
-}
+$e = 2;
 
+foreach ($arr as $value=>$key) {
+
+    if ($key=$e and $e<4){
+        echo "Есть!";
+        $e++;
+    }
+    else{
+        echo "Нет!";
+        $e++;
+    }
+    }
+
+echo "<br>";
+
+
+$k=Array(2,3,4);
+foreach ($arr as $value=>$key) {
+    foreach ($k as $item => $key2) {
+        if ($key == $key2)
+             echo "Yes!";
+        else
+             echo "No!";
+
+        }
+    }
 
 ?>
+
