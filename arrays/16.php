@@ -5,7 +5,6 @@
     7, 8, 9</p>
 
 <?php
-
 $i=1;
 $arr =Array (1, 2, 3, 4, 5, 6, 7, 8, 9);
 foreach ($arr as $value){
@@ -17,7 +16,6 @@ else {
     $i=$i+1;
     echo "$value<br>";
     $i=1;
-}
-}
+    }
+    }
 ?>
-
