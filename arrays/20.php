@@ -10,7 +10,7 @@
 $a='x';
 $c = Array('x');
 for ($i=0;$i<=20;$i++) {
-    $c[]=$c[$i].$a;
-    echo "$c[$i] <br>";
+$c[]=$c[$i].$a;
+echo "$c[$i] <br>";
 }
 ?>

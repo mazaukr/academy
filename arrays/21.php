@@ -7,15 +7,21 @@
     55555</p>
 
 <?php
+echo "<br>";
+$a=1;
+$c = Array(1);
+for ($i=0;$i<9;$i++) {
+    echo "$c[$i]";
+    $c[]=$c[$i] + $a;
 
-
-
-
-
-
-
-
-
-
-
+    for ($b=0;$b<=$i;$b++) {
+        if ($b<$i)
+            echo "$c[$i]";
+        else
+            echo "$c[$i]<br>";
+    }
+}
 ?>
+
+
+
