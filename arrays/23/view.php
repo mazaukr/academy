@@ -1,4 +1,5 @@
 <?php include("controller.php") ?>
+<?php include ('23.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,22 +42,25 @@
     </div>
 
 
-
-
     <div>
-
+        <p>23. Вам нужно разработать программу, которая считала бы сумму цифр числа введенного
+            пользователем. Например: есть число 123, то программа должна вычислить сумму цифр 1,
+            2, 3, т. е. 6.</p>
         <form method="get">
-            Digits: <input type="text" class="form-control" placeholder="Your Digits" name="name" value="<?php $_GET['name']?>">
-            Sum of each yours digit:: <input type="text"  class="form-control" placeholder="0" name="count" value="<?php $_GET['count']?>">
-            Price: <input type="text"  class="form-control" placeholder="0" name="price" value="<?php $_GET['price']?>">
+            Digits: <input type="text" class="form-control"  placeholder="Your Digits" name="name" value="<?php $_GET['name']?>">
+            Sum of each yours digit:: <input type="text"  class="form-control"  name="sum" value="<?php $_GET['sum']?>">
+ <!--           Price: <input type="text"   placeholder="0" class="form-control" name="price" value="<?php $_GET['price']?>">-->
             <input type="submit" value="Send">
         </form>
+
+            Result: <input type="text"  class="form-control"  name="sum" value="<?php echo "$sum";?>">
+
 
 
 
     </div>
 
- <?php include ('23.php'); ?>
+
 
 </div>
 
