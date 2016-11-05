@@ -12,23 +12,33 @@ while ($i<=30){
 $max= max($arr);
 $min = min($arr);
 
-echo "<br>";
-print_r($arr);
-echo "<br>";
+$func = arrayout($arr,$min,$max);
+echo "$func";
 
 for ($i=0;$i<30;$i++){
 
         if ($arr[$i] == $max) {
-            echo "<br> $arr[$i] MAX <br>";
-            $arr[$i] = $min;
+           $arr[$i] = $min;
         }
         elseif ($arr[$i] == $min) {
-            echo "<br> $arr[$i] MIN <br>";
-            $arr[$i] = $max;
+           $arr[$i] = $max;
         }
 }
 
 echo "<br><b> max={$max} <br> min={$min} <br> </b>";
 
-print_r($arr);
+$func = arrayout($arr,$min,$max);
+echo "$func";
+
+function arrayout ($arr,$min,$max) {
+    foreach ($arr as $value){
+        if ($value == $max)
+            echo ">>>$value <br>";
+        elseif ($value==$min)
+            echo ">>> $min <br>";
+        else
+            echo "$value <br>";
+    }
+return $value;
+}
 ?>
