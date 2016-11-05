@@ -5,14 +5,25 @@
 
 <?php
 
+$arr = Array();
+$i=0;
+while ($i<100){
+    $arr[]=rand (1, 100);
+    $i++;
+}
+$sumint=0;
+$sumfloat=0;
+print_r ($arr);
+foreach ($arr as $key=>$value){
+    if ($key%2==0 and $value>0){
+        $sumint=$sumint + $value;
+//        echo "$sumint <br>";
+    }
+    elseif ($key%2==1 and $value>0){
+        echo "<br>>>> $value ";
 
-
-
-
-
-
-
-
+    }
+}
+echo "<br><b>Сумма всех чисел с парными индексами = $sumint </b><br>";
 
 ?>
-
