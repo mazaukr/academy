@@ -13,11 +13,6 @@ session_start();
 
 
 
-
-
-
-
-
-$result = $_GET['result'];
+//$result = $_GET['result'];
 
 ?>
