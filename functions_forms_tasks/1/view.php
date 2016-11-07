@@ -62,18 +62,13 @@
         </div>
 
          <?php
-          $result = getCommonWords ($arr1,$arr2);
+         $arr1 = explode(" ",$_GET['text1']);
+         $arr2 = explode(" ",$_GET['text2']);
+         $result = getCommonWords ($arr1,$arr2);
 
+            echo "<br>";
 
-
-                  foreach ($result as $value){
-                     echo "$value ";
-                  }
-                echo "<br>";
-
-              foreach ($result as $value){
-                   print_r($result);
-                           }
+         print_r($result);
 
               ?>
 

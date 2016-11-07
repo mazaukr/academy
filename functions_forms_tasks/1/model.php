@@ -6,8 +6,7 @@ $arr1 = Array();
 $arr2 = Array();
 $result = Array();
 
-$arr1 = explode(" ",$_GET['text1']);
-$arr2 = explode(" ",$_GET['text2']);
+
 
 function getCommonWords($arr1, $arr2){
     $count1 = count($arr1);
