@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +38,8 @@
 <div class="container">
     <div class="page-header">
         <h1><a href="/">Form</a></h1>
+
+
         <?php include ('model.php')?>
     </div>
 
@@ -52,11 +55,20 @@
 
         <form method="get">
             String number 1: <textarea class="form-control" name="text1"> </textarea>
-            <!-- Result: <textarea class="form-control" name="result" > <?php echo $_GET['result'] ?></textarea>-->
+            <!-- Result: <textarea class="form-control" name="result" > <?php// echo $_GET['result'] ?></textarea>-->
             <input type="submit" value="Send">
         </form>
 
     </div>
+
+
+    <?php
+    foreach (top($arr1) as $value) {
+        echo "$value <br>";
+    }
+
+
+    ?>
 
 </div>
 

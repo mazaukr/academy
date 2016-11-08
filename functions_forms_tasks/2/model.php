@@ -2,23 +2,27 @@
 
 session_start();
 
+$arr1 = Array ();
 $arr1 = explode(" ",$_GET['text1']);
-$arrnew = Array ();
 
-foreach ($arr1 as $key=>$value){
-    $len = mb_strlen($value);
-    $arrnew[$len] = $value;
+function top ($arr1){
+    $arrnew = Array ();
+
+    foreach ($arr1 as $key => $value) {
+        $len = mb_strlen($value);
+        $arrnew[$len] = $value;
     }
 
+    krsort($arrnew);
+    echo "<br>";
 
-krsort($arrnew);
-echo "<br>";
-
-$arrnew = array_slice($arrnew,0,3);
-
-foreach ($arrnew as $value) {
-    echo "$value <br>";
+    $arrnew = array_slice($arrnew, 0, 3);
+return ($arrnew);
 }
-echo "<br>";
-print_r($arrnew);
+
+    echo "<br>";
+
+
+
+
 ?>
