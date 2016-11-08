@@ -53,7 +53,7 @@
                         Price [$/h]: <input type="text" class="form-control" praceholder="0" name="price"  value="<?=$_GET['price']?>"/>
                         <input type="submit" value="Send">
                 </form>-->
-        <p>2. Создать форму с элементом textarea. При отправке формы скрипт должен выдавать ТОП3 длинных слов в тексте. Реализовать с помощью функции.</p>
+        <p>3. Есть текстовый файл. Необходимо удалить из него все слова, длина которых превыщает N символов. Значение N задавать через форму. Проверить работу на кириллических строках - найти ошибку, найти решение.</p>
 
         <form method="get">
             String number 1: <textarea class="form-control" name="text1"> </textarea>
