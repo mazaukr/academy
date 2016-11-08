@@ -63,6 +63,7 @@
 
 
     <?php
+    $arr1 = explode(" ",$_GET['text1']);
     foreach (top($arr1) as $value) {
         echo "$value <br>";
     }

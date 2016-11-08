@@ -2,8 +2,7 @@
 
 session_start();
 
-$arr1 = Array ();
-$arr1 = explode(" ",$_GET['text1']);
+
 
 function top ($arr1){
     $arrnew = Array ();
