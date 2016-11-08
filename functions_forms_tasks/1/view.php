@@ -55,11 +55,22 @@
         <form method="get">
          String number 1: <textarea class="form-control" name="text1"> </textarea>
          String number 2: <textarea class="form-control" name="text2"> </textarea>
-         Result: <textarea class="form-control" name="result" > <?php echo $result ?></textarea>
+        <!-- Result: <textarea class="form-control" name="result" > <?php echo $_GET['result'] ?></textarea>-->
          <input type="submit" value="Send">
         </form>
 
         </div>
+
+         <?php
+         $arr1 = explode(" ",$_GET['text1']);
+         $arr2 = explode(" ",$_GET['text2']);
+         $result = getCommonWords ($arr1,$arr2);
+
+            echo "<br>";
+
+         print_r($result);
+
+              ?>
 
 </div>
 
