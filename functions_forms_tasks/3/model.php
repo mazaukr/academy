@@ -29,5 +29,10 @@ foreach ($arrayorig as $key => $value) {
 }
 
 print_r($arraynew);
+$textnew = implode(" ",$arraynew);
+
+$file = fopen('test.txt','w');
+fwrite($file,$textnew);
+fclose($file);
 
 ?>
