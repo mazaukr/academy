@@ -3,25 +3,23 @@
 session_start();
 
 //controller
-if (isset($_POST['lenght']))
-    $lenght = $_POST['lenght'];
-else
-    $lenght = 100;
+if (!isset($_GET['lenght']))
+    $_GET['lenght'] = 100;
 
 
 
+
+$arraynew = Array();
 $file = fopen('test.txt','r');
 $size = filesize('test.txt');
 $text = fread($file,$size);
 fclose($file);
 
 
-
-
 $arrayorig = explode(' ', $text);
 
 foreach ($arrayorig as $key => $value) {
-    if (mb_strlen($value)>$lenght)
+    if (mb_strlen($value)<=$_GET['lenght'])
         $arraynew[] = $value;
             else
                 continue;
