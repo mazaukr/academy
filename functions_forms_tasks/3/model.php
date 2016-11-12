@@ -2,12 +2,6 @@
 
 session_start();
 
-//controller
-if (!isset($_GET['lenght']))
-    $_GET['lenght'] = 100;
-
-
-
 
 $arraynew = Array();
 $file = fopen('test.txt','r');

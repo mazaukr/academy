@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Artem
- * Date: 11/9/2016
- * Time: 9:54 PM
- */
+
+
+if (!isset($_GET['lenght']) or $_GET['lenght']=='')
+    $_GET['lenght'] = 100;
+
+?>
+
