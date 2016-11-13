@@ -6,6 +6,4 @@ session_start();
 
 
 
-
-
 ?>
