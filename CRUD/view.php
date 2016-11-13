@@ -42,7 +42,6 @@
 
 <h2>Lists of entry</h2>
 
-<?php include ('model.php'); ?>
 
 
 

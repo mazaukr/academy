@@ -1,22 +1,17 @@
 <?php
-include ('controller.php');
-session_start();
-
-print_r($_SESSION);
-
-$guest = Array();
 
 
 
 //Add records
+
 function addentry (){
 $list = $_POST;
+$_SESSION['guest_list'][] = $list;
 
-    return $list;
 
 }
 
-print_r($_SESSION['guest_list']);
+
 
 
 //Edit records
@@ -36,3 +31,4 @@ function del_entry (){
 
 
 ?>
+

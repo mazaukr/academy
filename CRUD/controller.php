@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+
+include ('model.php');
 
 
 //Add form validate
@@ -20,11 +24,16 @@ if ( !isset($_POST['sum']))
 $list = Array();
 
 if (isset($_POST['action']) and $_POST['value']='Add') {
-$_SESSION['guest_list'][] = addentry ($list);
+addentry ($_POST);
 
 }
+print_r($_SESSION);
 
 
 
+
+
+
+include ('view.php');
 
 ?>
