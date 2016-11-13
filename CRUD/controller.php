@@ -1,5 +1,6 @@
 <?php
 
+
 //Add form validate
 if ( !isset($_POST['name']))
     $_POST['name'] ='';
@@ -16,10 +17,10 @@ if ( !isset($_POST['sum']))
 
 //Add validet
 
-if (isset($_POST['Add'])) {
+$list = Array();
 
-
-
+if (isset($_POST['action']) and $_POST['value']='Add') {
+$_SESSION['guest_list'][] = addentry ($list);
 
 }
 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,10 +42,10 @@
 
 <h2>Lists of entry</h2>
 
-        <?php        ?>
+<?php include ('model.php'); ?>
 
 
-        <?php include('model.php') ?>
+
     </div>
 
 
@@ -66,7 +65,7 @@
                         Price: <input type="text" class="form-control" praceholder="0" name="price"  value="<?=$_POST['price']=''?>"/>
                         Sum: <input type="text" class="form-control" praceholder="0" name="sum"  value="<?=$_POST['sum']=''?>"/>
 
-                        <input type="submit" value="Add" name="Add">
+                        <input type="submit" name="action" value="Add">
                 </form>
 
 
