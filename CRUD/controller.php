@@ -23,12 +23,14 @@ if ( !isset($_POST['sum']))
 
 $list = Array();
 
-if (isset($_POST['action']) and $_POST['value']='Add') {
-addentry ($_POST);
+//Validate input for empty values
+if (isset($_POST['action']) and $_POST['value']='Add')
+    if ($_POST['name']!=='' and $_POST['count']!=='' and $_POST['price']!=='')
+        addentry ($_POST);
 
-}
+
+
 print_r($_SESSION);
-
 
 
 

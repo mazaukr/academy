@@ -42,7 +42,14 @@
 
 <h2>Lists of entry</h2>
 
+        <?php
+        foreach ($_SESSION['guest_list'] as $key => $value) {
+            foreach ($value as $key2=>$value2) {
+                echo $value2;echo "=>";echo $value2;
+            }
+        }
 
+?>
 
 
     </div>
