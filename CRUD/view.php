@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,6 +44,8 @@
 <h2>Lists of entry</h2>
 
         <?php
+
+  
         foreach ($_SESSION['guest_list'] as $key => $value) {
             foreach ($value as $key2=>$value2) {
                 echo $value2;echo "=>";echo $value2;
