@@ -5,6 +5,7 @@ session_start();
 include ('model.php');
 
 
+
 //Add form validate
 if ( !isset($_POST['name']))
     $_POST['name'] ='';
@@ -28,11 +29,14 @@ $list = Array();
 //Validate input for empty values
 if (isset($_POST['action']) and $_POST['value']='Add')
     if ($_POST['name']!=='' and $_POST['count']!=='' and $_POST['price']!=='')
-        addentry ($_POST);
+        addentry($_POST);
+
+
+
+
 
 //if (!isset($_POST['action']) and  $_SESSION['guest_list']=='' )
 //    $_SESSION['guest_list']=='';
-
 
 
 

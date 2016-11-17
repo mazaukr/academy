@@ -46,11 +46,14 @@
         <?php
         if ($_SESSION['guest_list'] !=='') {
             foreach ($_SESSION['guest_list'] as $key => $value) {
-
+                echo "<br>";
+                echo $key;
+ //               echo "=>";
+                    echo "<br>";
                 foreach ($value as $key2 => $value2) {
-                    echo $value2;
+                    echo $key2;
                     echo "=>";
-                    echo $value2;
+                    echo "$value2  ";
                 }
             }
         }
@@ -74,11 +77,15 @@
                         Name: <input type="text" class="form-control" praceholder="Name..." name="name" value="<?php  echo ($_POST['name']='')?>"/>
                         Count: <input type="text" class="form-control" praceholder="0" name="count" value="<?=$_POST['count']=''?>"/>
                         Price: <input type="text" class="form-control" praceholder="0" name="price"  value="<?=$_POST['price']=''?>"/>
-                        Sum: <input type="text" class="form-control" praceholder="0" name="sum"  value="<?=$_POST['sum']=''?>"/>
+                            <input type="submit" name="action" value="Add">
 
-                        <input type="submit" name="action" value="Add">
+
                 </form>
 
+        <form method="post">
+        Del: <input type="text" class="form-control"  praceholder="0" name="sum"  value="<?=$_POST['sum']=''?>"/>
+            <input type="submit" name="action" value="Del">
+        </form>
 
     </div>
 
