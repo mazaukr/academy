@@ -44,14 +44,16 @@
 <h2>Lists of entry</h2>
 
         <?php
+        if ($_SESSION['guest_list'] !=='') {
+            foreach ($_SESSION['guest_list'] as $key => $value) {
 
-  
-        foreach ($_SESSION['guest_list'] as $key => $value) {
-            foreach ($value as $key2=>$value2) {
-                echo $value2;echo "=>";echo $value2;
+                foreach ($value as $key2 => $value2) {
+                    echo $value2;
+                    echo "=>";
+                    echo $value2;
+                }
             }
         }
-
 ?>
 
 

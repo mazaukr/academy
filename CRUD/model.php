@@ -5,8 +5,8 @@
 //Add records
 
 function addentry (){
-$list = $_POST;
-$_SESSION['guest_list'][] = $list;
+        $list = $_POST;
+        $_SESSION['guest_list'][] = $list;
 
 
 }

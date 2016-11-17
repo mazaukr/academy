@@ -18,6 +18,8 @@ if ( !isset($_POST['price']))
 if ( !isset($_POST['sum']))
     $_POST['sum'] ='';
 
+if ( !isset($_SESSION['guest_list']))
+    $_SESSION['guest_list'] ='';
 
 //Add validet
 
@@ -27,6 +29,10 @@ $list = Array();
 if (isset($_POST['action']) and $_POST['value']='Add')
     if ($_POST['name']!=='' and $_POST['count']!=='' and $_POST['price']!=='')
         addentry ($_POST);
+
+//if (!isset($_POST['action']) and  $_SESSION['guest_list']=='' )
+//    $_SESSION['guest_list']=='';
+
 
 
 
