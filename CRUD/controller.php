@@ -38,14 +38,14 @@ if (isset($_POST['action']) and $_POST['value']='del')
         del_entry($_POST);
 
 //Validate Edit action
-if (isset($_POST['action']) and $_POST['value']='edit')
-    if (isset($_POST['editid']))
-        edit_entry($_POST);
+if (isset($_GET['action']) and $_GET['value']='edit')
+    if (isset($_GET['editid']))
+        edit_entry($_GET);
 
 
 
 
-print_r($_SESSION);
+print_r($_GET);
 
 
 

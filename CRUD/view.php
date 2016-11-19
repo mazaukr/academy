@@ -59,15 +59,14 @@
                 <form method="post">
                 <input type="submit" name="action" value="del">
                 <input type="hidden" name="deleteid" value="<?= $key?>">
+                <input type="submit" name="action" value="edit">
+                    <?php print_r($_POST)?>
 
                 </form>
 
-                <form   method="post">
-                    <input type="submit" name="action" value="edit">
+                <form   method="get">
+                    <input type="submit" name="action" value="editold">
                     <input type="hidden" name="editid" value="<?= $key?>">
-                    <input type="hidden" name="name2" value="<?= $_POST['name'] ?>">
-                    <input type="hidden" name="count2" value="<?= $_POST['count'] ?>">
-                    <input type="hidden" name="price2" value="<?= $_POST['price'] ?>">
 
                 </form>
 

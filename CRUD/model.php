@@ -24,19 +24,19 @@ $del = $_POST['deleteid'];
 
 //Edit records
 function edit_entry (){
-    $key = $_POST['editid'];
+    $key = $_GET['editid'];
 
-    $_SESSION['guest_list'][$key]['name']=$_POST['name2'];
-    $_SESSION['guest_list'][$key]['count']=$_POST['count2'];
-    $_SESSION['guest_list'][$key]['price']=$_POST['price2'];
+    $_SESSION['guest_list'][$key]['name']=$_GET['name'];
+    $_SESSION['guest_list'][$key]['count']=$_GET['count'];
+    $_SESSION['guest_list'][$key]['price']=$_GET['price'];
 
     echo "<br>";
     print_r($_SESSION);
     echo "<br>";
 
-   echo $_SESSION['guest_list'][$key]['name2'];
-    echo $_SESSION['guest_list'][$key]['count2'];
-    echo $_SESSION['guest_list'][$key]['price2'];
+    echo $_SESSION['guest_list'][$key]['name'];
+    echo $_SESSION['guest_list'][$key]['count'];
+    echo $_SESSION['guest_list'][$key]['price'];
 
 
 }
