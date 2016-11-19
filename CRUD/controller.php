@@ -34,12 +34,12 @@ if (isset($_POST['action']) and $_POST['value']='Add')
 
 //Validate Delete action
 if (isset($_POST['action']) and $_POST['value']='del')
-    if (isset($_POST['delete']))
+    if (isset($_POST['deleteid']))
         del_entry($_POST);
 
 //Validate Edit action
 if (isset($_POST['action']) and $_POST['value']='edit')
-    if (isset($_POST['edit']))
+    if (isset($_POST['editid']))
         edit_entry($_POST);
 
 

@@ -58,13 +58,17 @@
 
                 <form method="post">
                 <input type="submit" name="action" value="del">
-                <input type="hidden" name="delete" value="<?= $key?>">
+                <input type="hidden" name="deleteid" value="<?= $key?>">
 
                 </form>
 
                 <form   method="post">
                     <input type="submit" name="action" value="edit">
-                    <input type="hidden" name="edit" value="<?= $key?>">
+                    <input type="hidden" name="editid" value="<?= $key?>">
+                    <input type="hidden" name="name2" value="<?= $_POST['name'] ?>">
+                    <input type="hidden" name="count2" value="<?= $_POST['count'] ?>">
+                    <input type="hidden" name="price2" value="<?= $_POST['price'] ?>">
+
                 </form>
 
 
