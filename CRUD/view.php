@@ -42,23 +42,39 @@
         <h1><a href="/">Form</a></h1>
 
 <h2>Lists of entry</h2>
-
+        <table>
         <?php
         if ($_SESSION['guest_list'] !=='') {
             foreach ($_SESSION['guest_list'] as $key => $value) {
+               echo "<br>";
+                echo "$key";
                 echo "<br>";
-                echo $key;
- //               echo "=>";
-                    echo "<br>";
-                foreach ($value as $key2 => $value2) {
-                    echo $key2;
-                    echo "=>";
-                    echo "$value2  ";
-                }
-            }
+
+                ?>
+
+                Name : <input style="width: 70px;" type="text"  value="<?= $value['name'] ?>">
+                Count : <input style="width: 70px;" type="text"  value="<?= $value['count'] ?>">
+                Price : <input style="width: 70px;" type="text"  value="<?= $value['price'] ?>">
+
+                <form method="post">
+                <input type="submit" name="action" value="del">
+                <input type="hidden" name="delete" value="<?= $key?>">
+
+                </form>
+
+                <form   method="post">
+                    <input type="submit" name="action" value="edit">
+                    <input type="hidden" name="edit" value="<?= $key?>">
+                </form>
+
+
+       <?php         } ?>
+
+        <?php
+
         }
 ?>
-
+</table>
 
     </div>
 
@@ -80,12 +96,8 @@
                             <input type="submit" name="action" value="Add">
 
 
-                </form>
 
-        <form method="post">
-        Del: <input type="text" class="form-control"  praceholder="0" name="sum"  value="<?=$_POST['sum']=''?>"/>
-            <input type="submit" name="action" value="Del">
-        </form>
+                </form>
 
     </div>
 

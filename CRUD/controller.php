@@ -26,17 +26,22 @@ if ( !isset($_SESSION['guest_list']))
 
 $list = Array();
 
-//Validate input for empty values
+//Validate ADD input for empty values
 if (isset($_POST['action']) and $_POST['value']='Add')
     if ($_POST['name']!=='' and $_POST['count']!=='' and $_POST['price']!=='')
         addentry($_POST);
 
 
+//Validate Delete action
+if (isset($_POST['action']) and $_POST['value']='del')
+    if (isset($_POST['delete']))
+        del_entry($_POST);
 
+//Validate Edit action
+if (isset($_POST['action']) and $_POST['value']='edit')
+    if (isset($_POST['edit']))
+        edit_entry($_POST);
 
-
-//if (!isset($_POST['action']) and  $_SESSION['guest_list']=='' )
-//    $_SESSION['guest_list']=='';
 
 
 
