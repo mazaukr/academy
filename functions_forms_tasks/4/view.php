@@ -62,6 +62,7 @@
 
     </div>
 
+    <?php read_dir(__DIR__); ?>
 
     <?php
 

@@ -1,12 +1,14 @@
 <?php
 
+function read_dir ()
+{
+    $dir = __DIR__;
 
-print_r(__DIR__);
-
-$dir = __DIR__;
-
-$files = scandir($dir);
-print_r($files);
-
+    $files = scandir($dir);
+    echo $dir."<br>";
+   foreach ($files as $key => $value) {
+       echo "$key => $value <br>";
+   }
+}
 
 ?>
