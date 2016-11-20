@@ -51,16 +51,15 @@
                 echo "<br>";
 
                 ?>
-
-                Name : <input style="width: 70px;" type="text"  value="<?= $value['name'] ?>">
-                Count : <input style="width: 70px;" type="text"  value="<?= $value['count'] ?>">
-                Price : <input style="width: 70px;" type="text"  value="<?= $value['price'] ?>">
-
                 <form method="post" action="">
+                Name : <input style="width: 70px;" type="text" name="name"  value="<?= $value['name'] ?>">
+                Count : <input style="width: 70px;" type="text" name="count"  value="<?= $value['count'] ?>">
+                Price : <input style="width: 70px;" type="text" name="price"  value="<?= $value['price'] ?>">
+
                 <input type="hidden" name="deleteid" value="<?= $key?>">
                 <input type="hidden" name="editid" value="<?= $key?>">
                 <input type="submit" name="action" value="Edit"> |
-                    <input type="submit" name="action" value="Del"> |
+                <input type="submit" name="action" value="Del"> |
 
                 </form>
 

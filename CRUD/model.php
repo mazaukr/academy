@@ -18,16 +18,11 @@ $del = $_POST['deleteid'];
 
 }
 
-
-
-
-
 //Edit records
 function edit_entry (){
-echo "Edit action: <br>";
-    print_r($_POST);
-
-
+    $list = $_POST;
+    $edit = $_POST['editid'];
+    $_SESSION['guest_list'][$edit] = $list;
 
 }
 

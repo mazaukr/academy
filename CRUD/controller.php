@@ -42,7 +42,6 @@ if (isset($_POST['action']) and $_POST['action'] == 'Del') {
 
     if (isset($_POST['action']) and $_POST['action'] == 'Edit' ){
 
-        echo "Controller validate <br>";
     edit_entry($_POST);
 }
 
