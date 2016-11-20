@@ -40,7 +40,7 @@
         <h1><a href="/">Form</a></h1>
 
         <?php include('controller.php') ?>
-        <?php include('model.php') ?>
+
     </div>
 
 
