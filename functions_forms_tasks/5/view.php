@@ -51,7 +51,7 @@
                         Price [$/h]: <input type="text" class="form-control" praceholder="0" name="price"  value="<?=$_GET['price']?>"/>
                         <input type="submit" value="Send">
                 </form>-->
-        <p>4. Написать функцию, которая выводит список файлов в заданной директории. Директория задается как параметр функции.</p>
+        <p>5. Написать функцию, которая выводит список файлов в заданной директории, которые содержат искомое слово.  Директория и искомое слово задаются как параметры функции.</p>
 
         <form method="get">
             <!--String number 1: <textarea class="form-control" name="text1"> </textarea>-->
@@ -62,11 +62,13 @@
 
     </div>
 
-    <?php read_dir(__DIR__); ?>
+   <?php
+   $dir = (__DIR__);
+   $word = 'control';
 
-    <?php
+   dir_scan ($dir, $word);
 
-    ?>
+   ?>
 
 </div>
 
