@@ -56,51 +56,31 @@
                 Count : <input style="width: 70px;" type="text"  value="<?= $value['count'] ?>">
                 Price : <input style="width: 70px;" type="text"  value="<?= $value['price'] ?>">
 
-                <form method="post">
-                <input type="submit" name="action" value="del">
+                <form method="post" action="">
                 <input type="hidden" name="deleteid" value="<?= $key?>">
-                <input type="submit" name="action" value="edit">
-                    <?php print_r($_POST)?>
-
-                </form>
-
-                <form   method="get">
-                    <input type="submit" name="action" value="editold">
-                    <input type="hidden" name="editid" value="<?= $key?>">
+                <input type="hidden" name="editid" value="<?= $key?>">
+                <input type="submit" name="action" value="Edit"> |
+                    <input type="submit" name="action" value="Del"> |
 
                 </form>
 
 
-       <?php         } ?>
+       <?php         }} ?>
 
-        <?php
 
-        }
-?>
+
 </table>
-
+er
     </div>
 
-
-
     <div>
-        <!--                <form method="post">
-                        Name: <input type="text" class="form-control" praceholder="Name..." name="name" />
-                        Count: <input type="text" class="form-control" praceholder="0" name="count" />
-                        Price [$/h]: <input type="text" class="form-control" praceholder="0" name="price"  />
-                        <input type="submit" value="Send">
-                </form>-->
 
-
-                        <form method="post">
+                        <form method="post" action="">
                         Name: <input type="text" class="form-control" praceholder="Name..." name="name" value="<?php  echo ($_POST['name']='')?>"/>
                         Count: <input type="text" class="form-control" praceholder="0" name="count" value="<?=$_POST['count']=''?>"/>
                         Price: <input type="text" class="form-control" praceholder="0" name="price"  value="<?=$_POST['price']=''?>"/>
                             <input type="submit" name="action" value="Add">
-
-
-
-                </form>
+                      </form>
 
     </div>
 
