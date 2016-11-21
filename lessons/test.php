@@ -1,23 +1,26 @@
 <?php
-/* JОповещаем пользователя, если сервер прервал соединение */
-function my_ssh_disconnect($reason, $message, $language) {
-    printf("Server disconnected with reason code [%d] and message: %s\n",
-        $reason, $message);
+set_include_path(get_include_path() . PATH_SEPARATOR . 'phpseclib');
+include('SSH2.php');
+include 'Net/SFTP.php';
+
+
+
+$ssh = new Net_SSH2('192.168.0.163');
+if (!$ssh->login('root', 'passw')) {
+    exit('Login Failed');
 }
 
-$methods = array(
-    'kex' => 'diffie-hellman-group1-sha1',
-    'client_to_server' => array(
-        'crypt' => '3des-cbc',
-        'comp' => 'none'),
-    'server_to_client' => array(
-        'crypt' => 'aes256-cbc,aes192-cbc,aes128-cbc',
-        'comp' => 'none'));
+$sftp = new Net_SFTP('192.168.0.163');
+    if (!$sftp->login('root', 'passw')) {
+            exit('Login Failed');
+        }
 
-$callbacks = array('disconnect' => 'my_ssh_disconnect');
+$file = " /home/test.txt";
+$text = "#10.1.80.45    socarfmdev.socar.ua".PHP_EOL."#10.1.80.45    socarfm.socar.ua".PHP_EOL;
+$sftp->put('/home/test.txt', $text);
 
-$connection = ssh2_connect('10.100.100.112', 22, $methods, $callbacks);
-if (!$connection) die('Connection failed');
 
 
 ?>
+
+
