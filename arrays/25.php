@@ -13,7 +13,7 @@ $max= max($arr);
 $min = min($arr);
 
 $func = arrayout($arr,$min,$max);
-echo "$func";
+echo "$func RRRRRRRRRRR";
 
 for ($i=0;$i<30;$i++){
 

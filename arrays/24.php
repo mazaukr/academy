@@ -5,11 +5,13 @@
 //echo "<br>";
 
 $digits = '83465783458334534634534535578';
+
+
 $lenght = strlen($digits);
 $count = 0;
 $number = 5;
 
-$digits_array = Array();
+//$digits_array = Array();
 
 for ($i=0;$i<$lenght;$i++) {
     if ($digits[$i] == $number)

@@ -45,37 +45,79 @@
 
 
     <div>
-        <!--                <form method="post">
-                        Name: <input type="text" class="form-control" praceholder="Name..." name="name" value="<?php if(isset($_GET['name'])) echo clear_data($_GET['name'])?>"/>
-                        Count: <input type="text" class="form-control" praceholder="0" name="count" value="<?=$_GET['count']?>"/>
-                        Price [$/h]: <input type="text" class="form-control" praceholder="0" name="price"  value="<?=$_GET['price']?>"/>
-                        <input type="submit" value="Send">
-                </form>-->
-        <p>5. Написать функцию, которая выводит список файлов в заданной директории, которые содержат искомое слово.  Директория и искомое слово задаются как параметры функции.</p>
 
-        <form method="get">
-            <!--String number 1: <textarea class="form-control" name="text1"> </textarea>-->
-            <!-- Result: <textarea class="form-control" name="result" > <?php// echo $_GET['result'] ?></textarea>-->
-            Word: <input type="text"  praceholder="0"  name="word" "/>
-            <input type="submit" value="Send">
-        </form>
+
+
+        <p>6. Создать страницу, на которой можно загрузить несколько фотографий в галерею. Все загруженные фото должны помещаться в папку gallery и выводиться на странице в виде таблицы.</p>
+
+    <form method="post" enctype="multipart/form-data">
+    <input type="file" name="uploadfile">
+        <input type="submit" name="Загрузить">
+    </form>
+
+        <?php
+
+        $tmp_file = basename($_FILES['uploadfile']['tmp_name']);
+        $orig_file = $_FILES['uploadfile']['name'];
+        copy ($_FILES['uploadfile']['tmp_name'],"gallery/".$orig_file);
+
+        ?>
 
     </div>
 
-   <?php
-   $dir = (__DIR__);
-   //$word = 'vi';
-   if ($_GET['word'] !== '') {
-       $word = $_GET['word'];
-       dir_scan($dir, $word);
-   }
-   else {
-       $files = scandir($dir);
-       foreach ($files as $key => $value) {
-           if ($value !== '.' and $value !== '..' )  echo "$value <br>";
-           }
-   }
-   ?>
+
+    <?php
+    $images = gallery_view();
+    //print_r ($images);
+
+    $img = "gallery\\";
+
+      $column = 3;
+        $rows = 4;
+      $i=0;
+      $b=0;
+$count = count($images);
+
+    $image_count = '2';
+
+
+            //      if ($value !== "." and $value !== "..")
+
+
+    echo "<table>";
+
+    for ($i=0; $i<=$rows; $i++) {
+        echo "<tr>";
+
+        for ($b = 0; $b <= $column; $b++) {
+
+            if ($image_count < $count) {
+
+                    echo "<td>";
+                    echo " <a href=\"gallery.\\$images[$image_count]\"  target=\"_blank\"><img style='margin: 10px';  src=\"gallery.\\$images[$image_count]\" width=\"200px\" height=\"200px\"></a>";
+                    echo "</td>";
+                    $image_count++;
+
+                }
+
+            }
+
+            echo "</tr>";
+        }
+
+    echo "</table>";
+
+
+
+
+
+    ?>
+
+    <div>
+
+
+    </div>
+
 
 </div>
 

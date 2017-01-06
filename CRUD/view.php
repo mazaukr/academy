@@ -47,7 +47,7 @@
         if ($_SESSION['guest_list'] !=='') {
             foreach ($_SESSION['guest_list'] as $key => $value) {
                echo "<br>";
-                echo "$key";
+               echo "$key";
                 echo "<br>";
 
                 ?>
@@ -69,7 +69,7 @@
 
 
 </table>
-er
+
     </div>
 
     <div>
