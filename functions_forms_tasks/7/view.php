@@ -37,22 +37,35 @@
 <!-- Begin page content -->
 <div class="container">
     <div class="page-header">
-        <h1><a href="/">Form</a></h1>
+        <h1><a href="/">Comments</a></h1>
 
         <?php include('controller.php') ?>
 
     </div>
 
 
+
+
     <div>
-
-
 
         <p>7. Создать гостевую книгу, где любой человек может оставить комментарий в текстовом поле и добавить его. Все добавленные комментарии выводятся над текстовым полем.</p>
 
-
     </div>
 
+    <div>
+
+
+        <form method="post">
+            Your Name: <input type="text"  class="form-control" name="name"> </input>
+            Your comment: <input type="text"  class="form-control" name="comment"> </input>
+            <input type="submit" value="Add">
+
+        </form>
+
+
+
+
+    </div>
 
 
     <div>
@@ -60,6 +73,11 @@
 
     </div>
 
+
+    <div>
+
+
+    </div>
 
 </div>
 
