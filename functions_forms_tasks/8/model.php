@@ -1,6 +1,50 @@
 <?php
 
-//Function Add comments to file
+
+
+/*
+while (!feof($bad_words)) {
+    $word = fgets($bad_words,1024);
+
+    if (mb_strpos($_POST['comment'],$word,true) ==true) {
+        echo " <br> true <br>";
+        var_dump($word."<br>   word");
+        var_dump($_POST['comment']."<br>");
+    }
+    else {
+        echo " <br> false <br>";
+        var_dump($_POST['comment']."<br>");
+        var_dump($word."<br>   word");
+    }
+    //echo $pos;
+}
+*/
+
+
+//Find bad words in comments
+
+function words_mat ($mat)
+{
+
+$mats = Array('дурак', 'лол', 'идиот', 'козёл');
+
+    foreach ($mats as $key) {
+        if (stristr($_POST['comment'], $key) == true) {
+            $mat = 'yes';
+          //  echo "MAT = TRUE <br>";
+            break;
+        } else {
+            $mat = 'no';
+      //      echo "MAT = FALSE <br>";
+        }
+    }
+
+    return $mat;
+
+}
+
+
+//Function Add comments in file
 function comment_add ()
 {
     $file = fopen("comments.txt", "a+") or die("File not fount");
@@ -44,11 +88,9 @@ function comments_panel ()
 
 
 
+
+
 <?php
-
-//print_r($_POST);
-
-
 
 
 ?>
